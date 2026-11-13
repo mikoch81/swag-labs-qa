@@ -38,7 +38,9 @@ public abstract class BaseWebMobileTest {
     @BeforeEach
     void startBrowser() {
         config = ConfigLoader.fromClasspath("config.properties");
-        boolean headless = Boolean.parseBoolean(config.getProperty("headless", "true"));
+        // -Dbrowser.headless (passed by the generated CI pipelines) overrides config.properties.
+        boolean headless = Boolean.parseBoolean(
+                System.getProperty("browser.headless", config.getProperty("headless", "true")));
         long timeoutSeconds = Long.parseLong(config.getProperty("timeoutSeconds", "10"));
         timeout = Duration.ofSeconds(timeoutSeconds);
         webConfig = WebConfig.from(config);

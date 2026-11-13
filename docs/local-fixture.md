@@ -1,7 +1,10 @@
 # Local fixture
 
-The web-desktop smoke tests do **not** point at any public website. Each
-app opens its own static HTML file bundled inside its test resources:
+Apps with an external target (`swag-labs`) run their
+web-desktop smoke against the configured URL and keep their fixture as the
+offline fallback (`QAFF_WEB_TARGET=fixture`). Every other app does **not**
+point at any public website. Each app has its own static HTML file bundled
+inside its test resources:
 
 - `apps/swag-labs/web-desktop/src/test/resources/fixtures/swag-labs.html`
 

@@ -7,7 +7,8 @@ mvn verify
 ```
 
 This runs Surefire across every module. The web-desktop smoke test starts
-Chrome (or Chromium) headlessly, opens a local HTML fixture and asserts the
+Chrome (or Chromium) headlessly, opens the configured URL for apps with an external target
+(`swag-labs`) and a local HTML fixture for the others, and asserts the
 page renders.
 
 ## Helper scripts

@@ -292,7 +292,7 @@
       },
       {
         "path": ".github/workflows/qaff-ci.yml",
-        "sha256": "2888de9c2bbd5b4726c69f07fcc8df7ad7bb772ab739b2cf544275613e31f396"
+        "sha256": "16a70f8634f97322aac45884925fde72196dbdb8346636712d86abe96f00659d"
       },
       {
         "path": ".gitignore",
@@ -424,7 +424,7 @@
       },
       {
         "path": "docs/HOW_TO_TARGET_YOUR_APP.md",
-        "sha256": "8752d4f16f645cdfd4bc4fd470354ee406bc6981f3ff00291e91cdea354da721"
+        "sha256": "5ecaa20dd2aec8488c46fc5ad80adca6f1fec3488d3888d956934f7500107f91"
       },
       {
         "path": "docs/HOW_TO_USE_ALLURE.md",
@@ -440,11 +440,11 @@
       },
       {
         "path": "docs/how-to-run.md",
-        "sha256": "d93ab1843c5072db43e35203845d304ad57c49f3491074c8ab44508ee00d5f8e"
+        "sha256": "f0263703a3961f20a8f3e082b71694a9a6bbac907a7bbe8379eec12dffadf65e"
       },
       {
         "path": "docs/local-fixture.md",
-        "sha256": "6aa22cb272f89938425175dbca9ca98cb8221b51232bcf57e3772d926d790c3b"
+        "sha256": "7f51d7696d73b73fd5efcac115d0264f80c21461e8e3207eaa2087fe979ccabc"
       },
       {
         "path": "docs/local-scripts.md",
@@ -508,7 +508,7 @@
       },
       {
         "path": "framework-web/src/main/java/com/example/swaglabsqa/web/driver/WebDriverFactory.java",
-        "sha256": "d6eb0fb5bc3813c85c35f8cc23452e97d83e8a53614a3547acd8fac6d81bf2d5"
+        "sha256": "8e0d9f5f8bf77aaaa358231a24c5ac53f9eba15bc2a798525b10b838a8109759"
       },
       {
         "path": "framework-web/src/main/java/com/example/swaglabsqa/web/extension/RegressionTest.java",
@@ -540,11 +540,11 @@
       },
       {
         "path": "framework-web/src/main/java/com/example/swaglabsqa/web/test/BaseWebMobileTest.java",
-        "sha256": "7312063e9b8d2e9d4130c1e0e5919d6201b03972814c44135da4dd18feb4ba3a"
+        "sha256": "b87d46fe73b260955ee09c4f4015db56e728ab6d569fcccb921c5aa09356f5a6"
       },
       {
         "path": "framework-web/src/main/java/com/example/swaglabsqa/web/test/BaseWebTest.java",
-        "sha256": "49313717353d61abacc62cad71c562de7c3418648e5fef65886884936ed06b72"
+        "sha256": "e1171cdb49dd5373f4d99bf28e4561179fb90ae5cc4d5b3c0a448a150f8fb33b"
       },
       {
         "path": "framework-web/src/test/java/com/example/swaglabsqa/web/page/ExamplePageObject.java",

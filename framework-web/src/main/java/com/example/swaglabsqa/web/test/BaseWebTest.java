@@ -22,11 +22,16 @@ import com.example.swaglabsqa.web.extension.ScreenshotOnFailureExtension;
  * <p>Browser selection order (highest wins):
  * <ol>
  *   <li>System property {@code -Dbrowser=firefox}</li>
+ *   <li>System property {@code -Dbrowser.name=firefox} (what the generated CI pipelines pass)</li>
  *   <li>Environment variable {@code QAFF_BROWSER=firefox}</li>
  *   <li>{@code browser=chrome} in {@code config.properties}</li>
  *   <li>Default: {@code chrome}</li>
  * </ol>
- * Supported values: {@code chrome}, {@code firefox}, {@code edge}.
+ * Supported values: {@code chrome}, {@code chromium} (same as chrome),
+ * {@code firefox}, {@code edge}.
+ *
+ * <p>Headless: {@code -Dbrowser.headless=true|false} overrides
+ * {@code headless} in {@code config.properties} (default {@code true}).
  *
  * <p>Failed tests automatically capture a screenshot via
  * {@link ScreenshotOnFailureExtension} — saved to
@@ -44,7 +49,9 @@ public abstract class BaseWebTest {
     @BeforeEach
     void startBrowser() {
         config = ConfigLoader.fromClasspath("config.properties");
-        boolean headless = Boolean.parseBoolean(config.getProperty("headless", "true"));
+        // -Dbrowser.headless (passed by the generated CI pipelines) overrides config.properties.
+        boolean headless = Boolean.parseBoolean(
+                System.getProperty("browser.headless", config.getProperty("headless", "true")));
         long timeoutSeconds = Long.parseLong(config.getProperty("timeoutSeconds", "10"));
         timeout = Duration.ofSeconds(timeoutSeconds);
         webConfig = WebConfig.from(config);
@@ -56,6 +63,8 @@ public abstract class BaseWebTest {
     private static String resolveBrowser(Properties config) {
         String sysprop = System.getProperty("browser");
         if (sysprop != null && !sysprop.isBlank()) return sysprop.trim();
+        String ciProp = System.getProperty("browser.name");
+        if (ciProp != null && !ciProp.isBlank()) return ciProp.trim();
         String env = System.getenv("QAFF_BROWSER");
         if (env != null && !env.isBlank()) return env.trim();
         return config.getProperty("browser", "chrome");

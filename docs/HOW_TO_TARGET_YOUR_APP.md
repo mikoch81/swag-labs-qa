@@ -46,12 +46,13 @@ Settings resolve in this order (**highest wins**):
 | --- | --- | --- | --- |
 | Target | `-Dweb.target` | `QAFF_WEB_TARGET` | `target` |
 | Base URL | `-Dweb.baseUrl` | `QAFF_WEB_BASE_URL` | `baseUrl` |
-| Browser | `-Dbrowser` | `QAFF_BROWSER` | `browser` |
+| Browser | `-Dbrowser` (or `-Dbrowser.name`, used by the generated CI) | `QAFF_BROWSER` | `browser` |
+| Headless | `-Dbrowser.headless` | — | `headless` |
 | Heading selector | `-Dweb.smoke.headingSelector` | `QAFF_WEB_SMOKE_HEADING_SELECTOR` | `smoke.headingSelector` |
 | Heading text | `-Dweb.smoke.headingText` | `QAFF_WEB_SMOKE_HEADING_TEXT` | `smoke.headingText` |
 | Item selector | `-Dweb.smoke.itemSelector` | `QAFF_WEB_SMOKE_ITEM_SELECTOR` | `smoke.itemSelector` |
 
-Supported browsers: `chrome` (default), `firefox`, `edge`.
+Supported browsers: `chrome` (default), `chromium` (same as `chrome`), `firefox`, `edge`.
 
 ## Worked example
 
