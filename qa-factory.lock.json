@@ -556,7 +556,7 @@
       },
       {
         "path": "README.md",
-        "sha256": "723b0e3b6e589f275cf0917fbefaed71edc290ebd2994d585fcd1034bd97cc28"
+        "sha256": "3927bde244c5cba4c4d7e32b0641a07a2f9f9201e78a810033fcc79b7e2212a8"
       },
       {
         "path": "scripts/allure-report.ps1",
