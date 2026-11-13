@@ -12,10 +12,12 @@ Step-by-step reference for the generated workflow at
 - The default `ubuntu-latest` runner image. The workflow uses
   `actions/setup-java@v6` (Temurin JDK 21) and Maven dependency
   caching (`cache: maven`); no other action is required.
-- A Chromium binary on the runner if you intend to actually execute
-  the `web-desktop` layer in CI. The workflow defaults
-  `BROWSER_BINARY` to `/usr/bin/chromium-browser` (present on
-  `ubuntu-latest`). Adjust if your runner has Chromium elsewhere.
+- A Chrome binary on the runner if you intend to actually execute
+  the `web-desktop` layer in CI. The workflow sets
+  `BROWSER_BINARY` to `/usr/bin/google-chrome` — Google Chrome stable,
+  present on `ubuntu-latest` together with its ChromeDriver. The image's
+  `/usr/bin/chromium-browser` is a Chromium snapshot build; its first
+  launch on a runner is slow and sometimes hangs, so it is not used.
 - **No secrets are required in Phase 1.9.** The workflow does not
   read any `secrets.*` value.
 
