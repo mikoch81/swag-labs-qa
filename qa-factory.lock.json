@@ -1,0 +1,683 @@
+{
+  "generatorVersion": "0.5.0",
+  "blueprintId": "java-maven-selenium-junit5-allure",
+  "blueprintVersion": "0.1.0",
+  "javaVersion": "21",
+  "projectName": "swag-labs-qa",
+  "packs": {
+    "qualityImpact": false,
+    "aiAgent": true,
+    "mcpToolkit": true
+  },
+  "ci": {
+    "jenkins": false,
+    "githubActions": true,
+    "azurePipelines": false,
+    "gitlabCi": false,
+    "jenkinsStrictQualityGate": false,
+    "githubActionsStrictQualityGate": false,
+    "azurePipelinesStrictQualityGate": false,
+    "gitlabCiStrictQualityGate": false,
+    "jenkinsTrendReport": false,
+    "githubActionsTrendReport": false,
+    "azurePipelinesTrendReport": false,
+    "gitlabCiTrendReport": false,
+    "jenkinsStrictTrendGate": false,
+    "githubActionsStrictTrendGate": false,
+    "azurePipelinesStrictTrendGate": false,
+    "gitlabCiStrictTrendGate": false,
+    "githubActionsPerformanceRun": false,
+    "jenkinsPerformanceRun": false,
+    "azurePipelinesPerformanceRun": false,
+    "gitlabCiPerformanceRun": false,
+    "githubActionsPerLayerAllure": false,
+    "jenkinsPerLayerAllure": false,
+    "azurePipelinesPerLayerAllure": false,
+    "gitlabCiPerLayerAllure": false,
+    "githubActionsSchedule": "0 5 * * 1-5",
+    "githubActionsAllureReport": true,
+    "jenkinsZephyrSync": false,
+    "githubActionsZephyrSync": false,
+    "githubActionsPagesPublish": true
+  },
+  "integrations": {
+    "zephyr": {
+      "enabled": false,
+      "provider": "zephyr-scale-cloud",
+      "mode": "dry-run",
+      "jenkinsSync": false,
+      "githubActionsSync": false,
+      "failOnUnmapped": false
+    }
+  },
+  "failureAnalysisAi": null,
+  "aiClients": [
+    "claude-code"
+  ],
+  "apps": [
+    {
+      "id": "swag-labs",
+      "layers": [
+        "web-desktop"
+      ],
+      "web": {
+        "target": "external",
+        "baseUrl": "https://www.saucedemo.com/",
+        "engine": "selenium",
+        "smoke": {
+          "headingSelector": ".login_logo",
+          "headingText": "Swag Labs",
+          "itemSelector": "#login-button"
+        }
+      }
+    }
+  ],
+  "generatedBy": "qaff",
+  "deterministic": true,
+  "generatedFiles": {
+    "schema": "qaff/managed-snapshot/v1",
+    "algorithm": "sha256",
+    "files": [
+      {
+        "path": ".ai/agents/api-test-generator.agent.md",
+        "sha256": "81146b8873a9ef0affb57d80d03cf792e38b014724444f176e4c9c1bc53be52b"
+      },
+      {
+        "path": ".ai/agents/code-reviewer.agent.md",
+        "sha256": "15abcb5b8d9f8349602a083623f0c56bf66a12698820add31fdbcb083f950fd5"
+      },
+      {
+        "path": ".ai/agents/failure-analyst.agent.md",
+        "sha256": "491d74f281b20aaef07adac407c7d44c2441b0340b5bc47a3147ab476e769ccb"
+      },
+      {
+        "path": ".ai/agents/integration-test-planner.agent.md",
+        "sha256": "0bf6050ab4dc0d407de2fe6aea92deae8d6ceac5e63efeab89386c8829f5366a"
+      },
+      {
+        "path": ".ai/agents/locator-healer.agent.md",
+        "sha256": "7cc29e1d86a4a57f81212dd0881a914ee99fa209d481c66e0f140a11cfffc2da"
+      },
+      {
+        "path": ".ai/agents/performance-analyst.agent.md",
+        "sha256": "e99f2559d5b183560c17b7f126ce59dfe6ab51b9137a4c53ca1f89e32274c646"
+      },
+      {
+        "path": ".ai/agents/test-generator.agent.md",
+        "sha256": "ae3a51840dbb8573e4fcf3f829a4c9b9da30ca746a62688b32050ccfeac8faef"
+      },
+      {
+        "path": ".ai/contracts/allure-step-mapping.example.json",
+        "sha256": "a0e5f836436ef98e46f7c6eea6fe6a40176122c835ded4a52d25b440f756034f"
+      },
+      {
+        "path": ".ai/contracts/generated-test-review.example.json",
+        "sha256": "2512f02acacf7f6a6f877bafe322fc2888b5cba14452a03feba61639c9c8ccf6"
+      },
+      {
+        "path": ".ai/contracts/locator-evidence.example.json",
+        "sha256": "f9beb6522a9c95acfca5980c22093ad110b53b3d3c3886127c4f30a9e9488285"
+      },
+      {
+        "path": ".ai/contracts/scenario-contract.example.json",
+        "sha256": "a930d002d6b081c03647707d1e017578a115cbc232092b65637b116c51dd8e57"
+      },
+      {
+        "path": ".ai/contracts/test-authoring-request.template.json",
+        "sha256": "bc455c55401a8dfeb29d905df675eaaac0de638ffc6f35370491db89cabc941e"
+      },
+      {
+        "path": ".ai/instructions/allure-step-policy.md",
+        "sha256": "707161b8a96b356636de3e153466db67f6baf2d4d978d59e43f021e92dfa1a63"
+      },
+      {
+        "path": ".ai/instructions/generated-framework-authoring.md",
+        "sha256": "7835bfacbea8802811e1d5151b9a1f4fec982d6564950fcd7221615d486e29a5"
+      },
+      {
+        "path": ".ai/instructions/locator-policy.md",
+        "sha256": "eedc817923d4c6c1b69c616763fd58396ee1b34f3feff9e1bf5b38648055cb8f"
+      },
+      {
+        "path": ".ai/mcp/mcp-config.example.json",
+        "sha256": "e988e383afc86a0b278b765d244df55417a2ab0494fdf5b4b4d81b369aa8d9bd"
+      },
+      {
+        "path": ".ai/mcp/performance-results-mcp.md",
+        "sha256": "b4c15a1aaf0d15e16450d2e821d2ab071fd738e3809e27df8dc912c794073598"
+      },
+      {
+        "path": ".ai/mcp/README.md",
+        "sha256": "e1886349d5b9930ae3dbe6d3dbbdde50f185703731942be80e786c9a81f028ba"
+      },
+      {
+        "path": ".ai/mcp/repository-inspection-mcp.md",
+        "sha256": "ca3c4ff9117a966d7a7b50222390499ac08f29e1fdff7b19fd7e841f854b7027"
+      },
+      {
+        "path": ".ai/mcp/server.manifest.json",
+        "sha256": "54b37a2f54ac3874fce9caadf7d2bd1ab8cdc08dc8844f46f63b1398c77e75e8"
+      },
+      {
+        "path": ".ai/mcp/server/server.js",
+        "sha256": "32364ca200f4a49fc52727aaa74f1b87e1cbd691fbee681664615ccd8e7e534c"
+      },
+      {
+        "path": ".ai/mcp/test-results-mcp.md",
+        "sha256": "530b2a193652ef24a26dab2161db8f7a0c61956c19780b97b171ab50b8a30f81"
+      },
+      {
+        "path": ".ai/mcp/tools/attach-report-to-jira.tool.md",
+        "sha256": "0e7bfd36e96af5b7e32845222c3a59a3fd2df3513507f149459acdd21a13d828"
+      },
+      {
+        "path": ".ai/mcp/tools/compare-performance-baseline.tool.md",
+        "sha256": "a3e143ce52d274cb0cf3bbe67311e3000164dee9e34a593f56db918431a6db88"
+      },
+      {
+        "path": ".ai/mcp/tools/create-zephyr-execution.tool.md",
+        "sha256": "8b1c3487cfb76229995e3380d2525b9c6ef45cf81826ee1ea560eea99fcf3cb5"
+      },
+      {
+        "path": ".ai/mcp/tools/inspect-repository-structure.tool.md",
+        "sha256": "34a4c2530d575ff405c3d2dae8c65d01d2fe687b5aef7b7ce4ceaa9fc6ba1ada"
+      },
+      {
+        "path": ".ai/mcp/tools/read-test-results.tool.md",
+        "sha256": "8cd73b10b5235def3535b0e411eb6ec01e55460b8ac326a79ea4ce15d3bb01cd"
+      },
+      {
+        "path": ".ai/mcp/tools/suggest-test-implementation.tool.md",
+        "sha256": "0b34a58854b8a69305c000becf0b1e7812771e9ba48a6fe0b3cd4252171d5561"
+      },
+      {
+        "path": ".ai/mcp/tools/sync-testrail-results.tool.md",
+        "sha256": "3ab12f862e95b814415762df18ea5daea83074b3964bee156c43db12b972f05f"
+      },
+      {
+        "path": ".ai/mcp/tools/sync-xray-results.tool.md",
+        "sha256": "7b746facdd14aa1ddcfa8ca1b5953e7ae1fe6deb7db3983efeabcd3b355f08f2"
+      },
+      {
+        "path": ".ai/prompts/analyze-allure-results.md",
+        "sha256": "1a9826468ae9158aac4c2c63e6f19c452c1e06255f68dbf2b71545ac38a907ef"
+      },
+      {
+        "path": ".ai/prompts/analyze-quality-impact-results.md",
+        "sha256": "6f103492fff75c1e30aaf5b7bbd69fe5427788fcd4475da766f6cfceeeb5cfe1"
+      },
+      {
+        "path": ".ai/prompts/fix-failed-test.md",
+        "sha256": "ad221be72a8194bf42fa110ecc4ccb8a0c520bdac984d67ea595820b9e44f94b"
+      },
+      {
+        "path": ".ai/prompts/generate-api-test.md",
+        "sha256": "b635c3462492e3f1b1d3dfa5e6150eba332028daff597718858d8bda67ad8b8e"
+      },
+      {
+        "path": ".ai/prompts/generate-web-test-from-scenario.md",
+        "sha256": "5a11b3580b173aa490a329863877718e9241e0abb5efd92075f0837f2d9547b9"
+      },
+      {
+        "path": ".ai/prompts/generate-web-test.md",
+        "sha256": "006b2cbd4e62388f39634acd63a11bfe9b3c3b32ffef243b16f5d913e836b2d0"
+      },
+      {
+        "path": ".ai/prompts/review-generated-test.md",
+        "sha256": "38e23c08b4ae70752ba14ab29938ab1e12b427e95f922b59763164ee23ed335d"
+      },
+      {
+        "path": ".ai/prompts/review-new-test.md",
+        "sha256": "2aa627aed2529475bf8275027fa0f86184ac0e5469e494169de4c510412279cd"
+      },
+      {
+        "path": ".claude/agents/api-test-generator.md",
+        "sha256": "ec6c5d15301e3ade2b10e6dd5af1ebaaca554ee9e066f24ef7c28f7580e15b16"
+      },
+      {
+        "path": ".claude/agents/code-reviewer.md",
+        "sha256": "68c226584dc0359cc3c2a9542eea2c8ad01577ea2934a27126ebba8dfb630b73"
+      },
+      {
+        "path": ".claude/agents/failure-analyst.md",
+        "sha256": "c3226b960b79084dcd591f19950153129096874d607e251dfe38b725a36b2f34"
+      },
+      {
+        "path": ".claude/agents/integration-test-planner.md",
+        "sha256": "1ff91e081696717c022fa583a33492e4db097a3f94d55e187b8c6e1d0bb3036c"
+      },
+      {
+        "path": ".claude/agents/locator-healer.md",
+        "sha256": "38815d84cc845ebccc92052fa2a5a9dad5e9bb049e73b68e5f95854791ed16f2"
+      },
+      {
+        "path": ".claude/agents/test-generator.md",
+        "sha256": "cd5db822a8ffc896f7bae15d4cdd712556ae7331a89a8894ef5570e3c88ead0a"
+      },
+      {
+        "path": ".claude/rules/authoring-policies.md",
+        "sha256": "99dd6cb0107d9fd9366c7a45982acf5294bd3ea302fc1b65792f4d744e1e30d8"
+      },
+      {
+        "path": ".claude/skills/analyze-allure-results/SKILL.md",
+        "sha256": "c0464bc88aae5dbaed548f7a36f86f993df81bae2c860dde2f9f192b7e77a5a1"
+      },
+      {
+        "path": ".claude/skills/fix-failed-test/SKILL.md",
+        "sha256": "fd5a989b2e4472250a71e1ea751e74351c7e318ae519b6c45f3d12227b91cb86"
+      },
+      {
+        "path": ".claude/skills/generate-api-test/SKILL.md",
+        "sha256": "697eb336028c0b17d77a0d2b15351a3296d8bd1c089bacc92191215c9a9662a2"
+      },
+      {
+        "path": ".claude/skills/generate-web-test-from-scenario/SKILL.md",
+        "sha256": "4809197c74ff054a629c6a7ab269c7e86cd7b2682d869cf8e45bb05e346b6248"
+      },
+      {
+        "path": ".claude/skills/generate-web-test/SKILL.md",
+        "sha256": "04d98cb3a47d749b0a18c3c5e2b26b6812326cfd595c10c8081879341350021d"
+      },
+      {
+        "path": ".claude/skills/review-generated-test/SKILL.md",
+        "sha256": "17bd19a4aa1ecfa1bc73f4d72d9854e53a6a34850b56e48d6168ec77db97fcc6"
+      },
+      {
+        "path": ".claude/skills/review-new-test/SKILL.md",
+        "sha256": "e19876959ebbe6100c276924b9aeff1637b9f6cfb6f989f2de5bf74c5959c4eb"
+      },
+      {
+        "path": ".gitattributes",
+        "sha256": "52e87240f800e3270f39dcb05c18dc5fef71e5a004ec8ca469ca09935c51201d"
+      },
+      {
+        "path": ".github/workflows/qaff-ci.yml",
+        "sha256": "2888de9c2bbd5b4726c69f07fcc8df7ad7bb772ab739b2cf544275613e31f396"
+      },
+      {
+        "path": ".gitignore",
+        "sha256": "771060f69ca12b91a6f4d07de4d27aa25c7fe1601bfc7123019f1c2810e73a06"
+      },
+      {
+        "path": ".mcp.json",
+        "sha256": "6c0ae4b3abd0f48738ec7d0d55c7e1e491b047fdaa95dcf1b9dda4592be58f0a"
+      },
+      {
+        "path": "AGENTS.md",
+        "sha256": "6b846825339cd848c871e76452f99621afcdc4a0533891b1088b361422d7317a"
+      },
+      {
+        "path": "apps/swag-labs/web-desktop/pom.xml",
+        "sha256": "68d37297ae6daba84e0900dab1c54901dbf57bc5f36c2ff7506ed345bc7f57b8"
+      },
+      {
+        "path": "apps/swag-labs/web-desktop/src/test/java/com/example/swaglabsqa/apps/swaglabs/webdesktop/ExampleTestData.java",
+        "sha256": "b987eca2026eeec4b9562d1488465e33a8cc8f39b9bcfd0058f0a171775caf5e"
+      },
+      {
+        "path": "apps/swag-labs/web-desktop/src/test/java/com/example/swaglabsqa/apps/swaglabs/webdesktop/ExampleWebTest.java",
+        "sha256": "4f80310b7d730a428b1917345064a14443acd7ab12633869215e4409c84fa091"
+      },
+      {
+        "path": "apps/swag-labs/web-desktop/src/test/java/com/example/swaglabsqa/apps/swaglabs/webdesktop/pages/DemoHomePage.java",
+        "sha256": "8850016ca665dcc2520845b805b99260fe7fa64b7ad3a4625058767ff0a2a060"
+      },
+      {
+        "path": "apps/swag-labs/web-desktop/src/test/java/com/example/swaglabsqa/apps/swaglabs/webdesktop/pages/ProductCardComponent.java",
+        "sha256": "b4edfa1cd1f808347eaf6fe98899ecbfa723b2a7280ab4ec86fd56468640856a"
+      },
+      {
+        "path": "apps/swag-labs/web-desktop/src/test/java/com/example/swaglabsqa/apps/swaglabs/webdesktop/tests/DemoHomeSmokeTest.java",
+        "sha256": "922d1274e337f089e062a59d8cbe105b1b4333eb2f832590ee7eab9d9f35f9c9"
+      },
+      {
+        "path": "apps/swag-labs/web-desktop/src/test/java/com/example/swaglabsqa/apps/swaglabs/webdesktop/tests/DemoProductCardTest.java",
+        "sha256": "ac43c111ef592c084c872b89bc7e5990c68215b5211898704bc7ab12c64a393c"
+      },
+      {
+        "path": "apps/swag-labs/web-desktop/src/test/resources/allure.properties",
+        "sha256": "4525f247b12d517e8a1dd1e947de97c9e022bff4ca35211d069f69853766e230"
+      },
+      {
+        "path": "apps/swag-labs/web-desktop/src/test/resources/config.properties",
+        "sha256": "859cc779cae549320ec520b7b1dbd7375755e740e9c07d23ee67dca89a7d8294"
+      },
+      {
+        "path": "apps/swag-labs/web-desktop/src/test/resources/fixtures/swag-labs.html",
+        "sha256": "6dbfb93f2dc550390f3a3f7d1ff8b8114e41cd98cd4e1610afeb482483619fb6"
+      },
+      {
+        "path": "CLAUDE.md",
+        "sha256": "472931db154b992ae32abae469f4d459d8c20b32f7a7e532da8c9748d871e26a"
+      },
+      {
+        "path": "docs/agent-validation-checklist.md",
+        "sha256": "b301f124064f7f6fa926b0e27fe1310544d63452199a316a2dd7ce192213d93a"
+      },
+      {
+        "path": "docs/AI_ASSISTED_DEVELOPMENT.md",
+        "sha256": "540dd7f31898dfe80a5d40463bb7b24d20d77e39d2cb563accc31a7d82cf2176"
+      },
+      {
+        "path": "docs/ai-api-test-authoring.md",
+        "sha256": "bf6e9fa6504d8bdaeb807e9af1bcfe025db76e1f37a13de09bf01a46a2a9849d"
+      },
+      {
+        "path": "docs/ai-authoring-readiness.md",
+        "sha256": "9fd20ed0dcdaab3d51656aaf6c960988433ffa7e70417e85636e1236bce582b7"
+      },
+      {
+        "path": "docs/ai-web-test-authoring.md",
+        "sha256": "6a7edef8d26a5f6ec9846fb0432593f92cb324c34b2e4b59350d1bedda724c2f"
+      },
+      {
+        "path": "docs/allure-step-mapping-contract.md",
+        "sha256": "a9379a449a218d41c8dee54c5e6182fcb7439dfc5b5cfd093c428964e3fa85a6"
+      },
+      {
+        "path": "docs/allure-step-policy.md",
+        "sha256": "1180bb13873b0e044aaa5e7f4d2b33b38949a33c8b03230aea7d7b547283a66e"
+      },
+      {
+        "path": "docs/ci-cd.md",
+        "sha256": "20fdd3f4e117a0fb050286e2145ae99c44b013a9f060cddcfc58a3e0453891f0"
+      },
+      {
+        "path": "docs/DEVELOPER_GUIDE.md",
+        "sha256": "9df8e770e2f54e784a2f2a2f19dc3e375725498e22db0a02e36a0555bc324911"
+      },
+      {
+        "path": "docs/GENERATED_FILE_OWNERSHIP.md",
+        "sha256": "f1fff94689f4be4531248a7529ea34564dd883bfe83680b4494ecc0f1c42b784"
+      },
+      {
+        "path": "docs/generated-architecture.md",
+        "sha256": "5723b39f0b00454ce71f3df0231da9d3c0aa410fae9c7d33c121a16c98f250ab"
+      },
+      {
+        "path": "docs/generated-test-review-contract.md",
+        "sha256": "a02e36826f84e9d97f4700aad84be0ef2b919acd9850c8b266763cf3183fcd40"
+      },
+      {
+        "path": "docs/github-actions.md",
+        "sha256": "698664e4f22bb033af29bae876e8f32e2be94d54f90f8b441238fc775faf1a7e"
+      },
+      {
+        "path": "docs/HOW_TO_ADD_PAGE_OBJECT.md",
+        "sha256": "58181a6956173436bfcbfc4b0662c7ee23039cb81ca5f1ef8a36e3f37c218286"
+      },
+      {
+        "path": "docs/HOW_TO_ADD_WEB_TEST.md",
+        "sha256": "d9d867bfa8a01327c837e2c5b8c1cfffedf4f38fd2cbeb363c89aeb5f4dc1d84"
+      },
+      {
+        "path": "docs/HOW_TO_INTERPRET_VERIFY.md",
+        "sha256": "e502f1d0da83225803e90551befeb84305be591f9b75330ef92b33d980dcaa19"
+      },
+      {
+        "path": "docs/HOW_TO_KEEP_DEPENDENCY_DIRECTION_VALID.md",
+        "sha256": "1f4b7f225da3833cdac4edc9a5eb0fdb6990e8c7766b91e8c79dac1444f83765"
+      },
+      {
+        "path": "docs/HOW_TO_RUN_TESTS_LOCALLY.md",
+        "sha256": "a971b7556c2306c034c516fe53aa6733d7e2f002e8acd6c1e5a9b6c7097bf01d"
+      },
+      {
+        "path": "docs/HOW_TO_TARGET_YOUR_APP.md",
+        "sha256": "8752d4f16f645cdfd4bc4fd470354ee406bc6981f3ff00291e91cdea354da721"
+      },
+      {
+        "path": "docs/HOW_TO_USE_ALLURE.md",
+        "sha256": "5870030c762094bb0aaeb8f661e1da7a105ace2bf31d4fd4ccb7bf598b53cb43"
+      },
+      {
+        "path": "docs/HOW_TO_USE_GENERATED_SCRIPTS.md",
+        "sha256": "c57f2deb2098198d55176228e7a7471d575e8eb16f81a2e8b8021617eda8f4ae"
+      },
+      {
+        "path": "docs/HOW_TO_USE_JUNIT5.md",
+        "sha256": "9a5d95afc0b2ed245dc479bf5a89f8144152c16df24579d92761fa81fcd1b240"
+      },
+      {
+        "path": "docs/how-to-run.md",
+        "sha256": "d93ab1843c5072db43e35203845d304ad57c49f3491074c8ab44508ee00d5f8e"
+      },
+      {
+        "path": "docs/local-fixture.md",
+        "sha256": "6aa22cb272f89938425175dbca9ca98cb8221b51232bcf57e3772d926d790c3b"
+      },
+      {
+        "path": "docs/local-scripts.md",
+        "sha256": "97db2a31798e171d4708d665f07a59b8664463fe0a25a945314c7c4131453056"
+      },
+      {
+        "path": "docs/locator-evidence-contract.md",
+        "sha256": "32bb70d41f53c2bd773325f607d5bdb5488d510dcafe58dd98ce42db9c2e3274"
+      },
+      {
+        "path": "docs/locator-policy.md",
+        "sha256": "c30a4914b1f8e1f22b224668972e3c1354b98d884eb55c2b443bc1cefe578cd7"
+      },
+      {
+        "path": "docs/scenario-contract.md",
+        "sha256": "68d2ba099f9d3e45c4af6eb1ba973844fa490680c3b3acb4e92a4f27d8669625"
+      },
+      {
+        "path": "docs/test-authoring-request.md",
+        "sha256": "2c26ed1e24527aa2cadd19e0626fc9bc2e98fc7aea21ee71bf50982d584b8e7e"
+      },
+      {
+        "path": "framework-core/pom.xml",
+        "sha256": "911452e55449d69343ce96975742e7db28baf94a8951fe9ae191c59de3e1ce55"
+      },
+      {
+        "path": "framework-core/src/main/java/com/example/swaglabsqa/core/config/ConfigLoader.java",
+        "sha256": "fa96bad85b860c533e2ea564fe4ee84a679390c2b754352668b771d2211f7c08"
+      },
+      {
+        "path": "framework-core/src/main/java/com/example/swaglabsqa/core/util/ResourcePath.java",
+        "sha256": "de8bf6344e17bf2f5d327e46cc93582076115700ce4a335130c9c68b4e1f615f"
+      },
+      {
+        "path": "framework-core/src/main/java/com/example/swaglabsqa/core/util/Resources.java",
+        "sha256": "754291c2d52423084adad7355db00e4f347a0457a9f77c4e09f9eb6eb7894552"
+      },
+      {
+        "path": "framework-core/src/main/java/com/example/swaglabsqa/core/util/Retry.java",
+        "sha256": "11f09368025c771e729f258a98ff4f5bc11c60af62ee1bbfed5533eecf6d34d8"
+      },
+      {
+        "path": "framework-core/src/main/java/com/example/swaglabsqa/core/util/SoftAssertionHelper.java",
+        "sha256": "d160ecb146d66c4efab4f42e8c0ce7e4df4e7eb5c8231940cd80221e2bfd708e"
+      },
+      {
+        "path": "framework-core/src/main/java/com/example/swaglabsqa/core/util/TestDataBuilder.java",
+        "sha256": "807e9a78946ff482b331081a9af3677339ef9161dd5f5d1f5f9c750fad77d736"
+      },
+      {
+        "path": "framework-web/pom.xml",
+        "sha256": "c3e8a76eb0b29e282421d6f3ef46d40c1760da00f01967bf9bb06eaf4d3021c5"
+      },
+      {
+        "path": "framework-web/src/main/java/com/example/swaglabsqa/web/config/SmokeExpectations.java",
+        "sha256": "8bb5457aadd5df6189cf668ce610ac9497b65355ee385f7ebde63fdbcef62e84"
+      },
+      {
+        "path": "framework-web/src/main/java/com/example/swaglabsqa/web/config/WebConfig.java",
+        "sha256": "9f643a2adb1e2d16e06413e389f5e6dda107bdf829138a4655cdcdfe1fbad7af"
+      },
+      {
+        "path": "framework-web/src/main/java/com/example/swaglabsqa/web/driver/WebDriverFactory.java",
+        "sha256": "d6eb0fb5bc3813c85c35f8cc23452e97d83e8a53614a3547acd8fac6d81bf2d5"
+      },
+      {
+        "path": "framework-web/src/main/java/com/example/swaglabsqa/web/extension/RegressionTest.java",
+        "sha256": "2c0f01b5eff9a64c0710e136f1b7847807d5688e3dafa22254115daad31c7339"
+      },
+      {
+        "path": "framework-web/src/main/java/com/example/swaglabsqa/web/extension/RetryExtension.java",
+        "sha256": "248a625a5c15fc2041d38a817d2c21345a1418f7c63f8161ecbe79c68ceefe9f"
+      },
+      {
+        "path": "framework-web/src/main/java/com/example/swaglabsqa/web/extension/RetryingTest.java",
+        "sha256": "a3df994aeaca18f2ba3a10f2fdf0909a1ed8a18b7d96f6b18bb9749842e3fb18"
+      },
+      {
+        "path": "framework-web/src/main/java/com/example/swaglabsqa/web/extension/ScreenshotOnFailureExtension.java",
+        "sha256": "a681c6b7d85fea740e8e05591c6827675f33a62c3af989a60a677d223abd8645"
+      },
+      {
+        "path": "framework-web/src/main/java/com/example/swaglabsqa/web/extension/SmokeTest.java",
+        "sha256": "07897e5ac821b6e6149408fa798b246b08ce315de2d9d0887a1583f1fa37b217"
+      },
+      {
+        "path": "framework-web/src/main/java/com/example/swaglabsqa/web/page/BasePage.java",
+        "sha256": "71e87dedd3e96cb8b44d7f8711048d232e049e3be78dc3975399dc08a966e76f"
+      },
+      {
+        "path": "framework-web/src/main/java/com/example/swaglabsqa/web/page/PageComponent.java",
+        "sha256": "b9ccd480ce13b8933cc24287de6ec438f23a08b941d828e1a6e8134baf863065"
+      },
+      {
+        "path": "framework-web/src/main/java/com/example/swaglabsqa/web/test/BaseWebMobileTest.java",
+        "sha256": "7312063e9b8d2e9d4130c1e0e5919d6201b03972814c44135da4dd18feb4ba3a"
+      },
+      {
+        "path": "framework-web/src/main/java/com/example/swaglabsqa/web/test/BaseWebTest.java",
+        "sha256": "49313717353d61abacc62cad71c562de7c3418648e5fef65886884936ed06b72"
+      },
+      {
+        "path": "framework-web/src/test/java/com/example/swaglabsqa/web/page/ExamplePageObject.java",
+        "sha256": "fd2387cf19f1cea4efffb5c1dbbae2b3f429a161af2763aeebeb7f36d65f46cb"
+      },
+      {
+        "path": "pom.xml",
+        "sha256": "008f0c673546b55c2adeb2774134db9cef5a3db079c804b5940bf0afb8a12538"
+      },
+      {
+        "path": "README.md",
+        "sha256": "723b0e3b6e589f275cf0917fbefaed71edc290ebd2994d585fcd1034bd97cc28"
+      },
+      {
+        "path": "scripts/allure-report.ps1",
+        "sha256": "cea02207710e69dd37ffa40cfe345e01c51f69820cc7d826bc018cb567d1014d"
+      },
+      {
+        "path": "scripts/allure-report.sh",
+        "sha256": "973c38e3d545451a396c09063788a6d4e3b924fd24512d3b3ba0cb2a80df5ab3"
+      },
+      {
+        "path": "scripts/run-all-tests.ps1",
+        "sha256": "8b57cb5976387d72e03fd2c9d36726112eef5c8993cc2dfd0b88130962cc4f58"
+      },
+      {
+        "path": "scripts/run-all-tests.sh",
+        "sha256": "b53ecaf391139dfc511b8714244142a64133fa41f8fb8d2b2fc430139036d86f"
+      },
+      {
+        "path": "scripts/run-android-smoke.ps1",
+        "sha256": "a63917319d1662713503ff01d3f18f7a83516a6d11458bbd26e11114695ebf84"
+      },
+      {
+        "path": "scripts/run-android-smoke.sh",
+        "sha256": "f255bbdc7ea970d9efacbaa2bf63af616aab72549a2d3954871516e6122e2a60"
+      },
+      {
+        "path": "scripts/run-api-smoke.ps1",
+        "sha256": "cbd01853e586bff6572fb19b7654f2a58a10414a7fdfdaa33cc2460a972b651e"
+      },
+      {
+        "path": "scripts/run-api-smoke.sh",
+        "sha256": "8ff285de5f9780d62eaee38100981d308715f886bed8751b9f3a4aa2d6201f60"
+      },
+      {
+        "path": "scripts/run-gatling-smoke.ps1",
+        "sha256": "74352c28e459e893f9cabc15eb4681de82e8fd9cdadb3816463d2e7d6b0e32ab"
+      },
+      {
+        "path": "scripts/run-gatling-smoke.sh",
+        "sha256": "87a1a324e4a9e14e4fbbfbcb9e84e7a79032a111b77b871af1b35e28930a8ce4"
+      },
+      {
+        "path": "scripts/run-integration-smoke.ps1",
+        "sha256": "bb52ac9f57bfa4d9ddd6fa9ce622cc3fe154a16c5b795b9f6ccd53c72c710c23"
+      },
+      {
+        "path": "scripts/run-integration-smoke.sh",
+        "sha256": "6dba321190e75a2f5cb12749d9e01760655c312a2fab7009531d541368e44858"
+      },
+      {
+        "path": "scripts/run-ios-smoke.ps1",
+        "sha256": "fccba013d0936d01508ae38c4894275838050a29d3d302ed75a146a48300dfbd"
+      },
+      {
+        "path": "scripts/run-ios-smoke.sh",
+        "sha256": "352ff688f1717d0bb6fe26d8f345d0a57841f9776c9afc5c81db8e8313d4aeef"
+      },
+      {
+        "path": "scripts/run-jmeter-import-smoke.ps1",
+        "sha256": "5fbdedc7f526a48d008afed8f6051c0fb6c114099619b071c9af324cea4eb039"
+      },
+      {
+        "path": "scripts/run-jmeter-import-smoke.sh",
+        "sha256": "d9b3aa42eb10b152272c2cf197c47a3255d474e7f4c5d6526461bdca1ed471f8"
+      },
+      {
+        "path": "scripts/run-k6-import-smoke.ps1",
+        "sha256": "310fd28826360f0b2bf80404504c3f822489b6e7e964b28829cfe2bc2d9d7597"
+      },
+      {
+        "path": "scripts/run-k6-import-smoke.sh",
+        "sha256": "4f0993d6bc29e4a7b70832097d1e2bdb4b5e1920132a602aa1618bab541b8e4a"
+      },
+      {
+        "path": "scripts/run-mobile-appium-smoke.ps1",
+        "sha256": "5084063d980c09c52de5096a2e3f5f2baf09fe6cc8b263ecd147674ec0404f43"
+      },
+      {
+        "path": "scripts/run-mobile-appium-smoke.sh",
+        "sha256": "c284906ece95011d03006648a58f27efca86894890c6179a665d86fdfc1fcd4a"
+      },
+      {
+        "path": "scripts/run-performance-smoke.ps1",
+        "sha256": "65f3f31de0ec5325710d1e93fc6fd9670a51f1a0be0a5e6280b73feecc6e109c"
+      },
+      {
+        "path": "scripts/run-performance-smoke.sh",
+        "sha256": "e333a33ac4dc45719d3a87e9e72548790f12f8838a1bf306e39329b5f73fd6c0"
+      },
+      {
+        "path": "scripts/run-web-external-smoke.ps1",
+        "sha256": "797866057bbbae90548154e75fc49a721ae2893e8ab2dce8c42362809b8f459f"
+      },
+      {
+        "path": "scripts/run-web-external-smoke.sh",
+        "sha256": "761a55d2c77f5e009ddf5e9a3b4477da429461d54b8b7d882a172d8ec373dbf6"
+      },
+      {
+        "path": "scripts/run-web-mobile-smoke.ps1",
+        "sha256": "562b60ce4b9c062932b2b922410ec8d5ea36b559d942ecb526ff6837761273d6"
+      },
+      {
+        "path": "scripts/run-web-mobile-smoke.sh",
+        "sha256": "b215d2b3cb2a03f980a73d643caff3f1367fcad6390e37e385ba6236bd6d174d"
+      },
+      {
+        "path": "scripts/run-web-smoke.ps1",
+        "sha256": "6d9977c5a667cc49e17320656c2a0ee8d7ff69bc1998a93ec36671e4c49d2f84"
+      },
+      {
+        "path": "scripts/run-web-smoke.sh",
+        "sha256": "75b1e5f206c8f24926e8f2331730727bb3f326704f54b611927d533347b6e720"
+      },
+      {
+        "path": "scripts/verify-framework.ps1",
+        "sha256": "f8b1d2bcdf9855ffd93d3966e89055f46f2204968c86c9bbf7b257cdf079f664"
+      },
+      {
+        "path": "scripts/verify-framework.sh",
+        "sha256": "3336cb5ea845e8b0c6e9644e97307490b5c5f031c9a7486087aaf18c21a52d15"
+      }
+    ]
+  }
+}

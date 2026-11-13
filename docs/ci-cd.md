@@ -1,0 +1,60 @@
+# CI / CD strategy
+
+This generated framework wires **GitHub Actions** (Phase 1.9) as the runner.
+
+## Generated runners
+
+| Runner | Entry point | Notes |
+| --- | --- | --- |
+| GitHub Actions (Phase 1.9) | [`../.github/workflows/qaff-ci.yml`](../.github/workflows/qaff-ci.yml) | Runs on `pull_request` and `workflow_dispatch`. Selected app + layer via dispatch inputs. |
+
+## GitHub Actions workflow shape
+
+A single workflow at `.github/workflows/qaff-ci.yml`:
+
+- **on `pull_request`** — runs the full Maven reactor
+  (`mvn -B verify`).
+- **on `workflow_dispatch`** — accepts `application`, `layer`,
+  `environment`, `suite`, `browser` and `headless` inputs. When
+  both `application` and `layer` are concrete values (not `all`),
+  the workflow narrows the build to
+  `mvn -B -pl apps/<application>/<layer> -am verify`.
+
+Surefire reports, Allure raw results and (under QI)
+`framework-performance/reports/` are uploaded as workflow artifacts.
+
+See [`github-actions.md`](github-actions.md) for prerequisites,
+manual-dispatch instructions and current limitations.
+
+## What feeds which gate
+
+| Gate | Source | Where it lives | Status today |
+| --- | --- | --- | --- |
+| Functional smoke | JUnit 5 + Selenium (web-desktop) / RestAssured (api) | `apps/<id>/<layer>/target/surefire-reports/` | ✅ active |
+| Allure trend | Allure raw results | `apps/<id>/<layer>/target/allure-results/` | ✅ archived; report rendering left to the Allure consumer |
+| Dependency direction | `maven-enforcer-plugin` + qaff post-generation validator | every `mvn validate` / `verify` (incl. CI) and `qaff create` / `qaff verify` | ✅ active |
+| Performance trend | Quality Impact Pack outputs | n/a | Pack not enabled in this project. Re-run `qaff create` with `packs.qualityImpact: true` to scaffold it. |
+
+## Out of scope today
+
+- **No Jira / Zephyr / Xray / TestRail integration.** No runner creates defects, syncs test cases, or pushes traceability links. Roadmap.
+- **No CI-wired performance provider execution.** The `performance` layer module
+  runs its JUnit 5 placeholder under default CI. The local Gatling reference
+  smoke is explicit opt-in via `run-gatling-smoke` or direct Maven.
+- **No Jenkins** in this project. Re-run `qaff create` with `ci.jenkins.enabled: true` to scaffold it.
+- **No Azure Pipelines** in this project. Re-run `qaff create` with `ci.azurePipelines.enabled: true` to scaffold it.
+- **No GitLab CI** in this project. Re-run `qaff create` with `ci.gitlabCi.enabled: true` to scaffold it.
+- **No application deployment.** Generated runners run tests; the only
+  deployment is the opt-in Pages publish of the Allure report (below).
+- **No secrets.** Generated CI files contain zero credential
+  references.
+
+## Where to find more
+
+- [`github-actions.md`](github-actions.md) — prerequisites and manual-dispatch instructions for GitHub Actions.
+- [`../.github/workflows/qaff-ci.yml`](../.github/workflows/qaff-ci.yml) — the workflow itself.
+
+## Pages publishing (opt-in)
+
+The Allure HTML report is published to Pages for: `githubActions` (GitHub Pages) — main /
+default branch only, also after failed tests. Setup and URLs: [`github-actions.md`](github-actions.md).
