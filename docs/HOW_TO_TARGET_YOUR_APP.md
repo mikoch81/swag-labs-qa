@@ -56,7 +56,7 @@ Supported browsers: `chrome` (default), `chromium` (same as `chrome`), `firefox`
 Run the existing smoke against your app in Firefox, without editing any file:
 
 ```bash
-mvn -pl apps/<id>/web-desktop test \
+mvn -pl apps/<id>/web-desktop -am test \
   -Dweb.target=external \
   -Dweb.baseUrl=https://your-app.example.com \
   -Dbrowser=firefox

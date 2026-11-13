@@ -21,17 +21,22 @@ This runs all tests across all modules.
 ## Run tests for a specific app
 
 ```bash
-mvn -pl apps/myapp/web-desktop test
-mvn -pl apps/myapp/api test
-mvn -pl apps/myapp/integration test
+mvn -pl apps/myapp/web-desktop -am test
+mvn -pl apps/myapp/api -am test
+mvn -pl apps/myapp/integration -am test
 ```
+
+`-am` also builds the framework modules the app depends on. Without it Maven looks for
+them in the local repository and fails on a fresh clone.
 
 ## Run a specific test
 
 ```bash
-mvn test -Dtest=LoginTest
-mvn test -Dtest=LoginTest#userCanLogin
+mvn test -Dtest=LoginTest -Dsurefire.failIfNoSpecifiedTests=false
+mvn test -Dtest=LoginTest#userCanLogin -Dsurefire.failIfNoSpecifiedTests=false
 ```
+
+The flag keeps the modules that do not contain that test from failing the build.
 
 ## Run tests by tag
 

@@ -408,7 +408,7 @@
       },
       {
         "path": "docs/HOW_TO_ADD_WEB_TEST.md",
-        "sha256": "d9d867bfa8a01327c837e2c5b8c1cfffedf4f38fd2cbeb363c89aeb5f4dc1d84"
+        "sha256": "ac6c2f8a46cc752defa4021d3400900694fad1b839b31c49158f7a5ed9ea5f5b"
       },
       {
         "path": "docs/HOW_TO_INTERPRET_VERIFY.md",
@@ -420,11 +420,11 @@
       },
       {
         "path": "docs/HOW_TO_RUN_TESTS_LOCALLY.md",
-        "sha256": "a971b7556c2306c034c516fe53aa6733d7e2f002e8acd6c1e5a9b6c7097bf01d"
+        "sha256": "d890b30f4e50541391ecc6e11871b6282b080aa94e8998174d093b188e18268f"
       },
       {
         "path": "docs/HOW_TO_TARGET_YOUR_APP.md",
-        "sha256": "5ecaa20dd2aec8488c46fc5ad80adca6f1fec3488d3888d956934f7500107f91"
+        "sha256": "2a31b8abdbf517959212edfd4f5e849defbe5634c35144cca9319f1918174066"
       },
       {
         "path": "docs/HOW_TO_USE_ALLURE.md",

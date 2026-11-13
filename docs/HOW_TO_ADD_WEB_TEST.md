@@ -80,7 +80,7 @@ See [HOW_TO_USE_ALLURE.md](HOW_TO_USE_ALLURE.md) for details.
 ### 5. Run locally
 
 ```bash
-mvn -pl apps/<id>/web-desktop test
+mvn -pl apps/<id>/web-desktop -am test
 ```
 
 See [HOW_TO_RUN_TESTS_LOCALLY.md](HOW_TO_RUN_TESTS_LOCALLY.md) for more options.
