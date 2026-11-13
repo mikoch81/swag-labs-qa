@@ -19,8 +19,13 @@ allure-report/
 .DS_Store
 Thumbs.db
 
-# Downloaded sample apps (scripts/download-*-sample)
-.qaff/
+# qaff local state (downloaded sample apps, audit log, dry-run request files).
+# .qaff/managed-base/ stays tracked: qaff update merges local edits from it.
+.qaff/*
+!.qaff/managed-base/
+
+# qaff update --apply report
+QAFF_UPDATE_REPORT.md
 
 # MCP dry-run request files (may hold caller-supplied comment text)
 .ai/mcp/outbox/

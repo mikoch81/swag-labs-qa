@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "requestId": "REQUEST-DEMO-001",
+  "scenarioContractRef": ".ai/contracts/scenario-contract.example.json",
+  "target": {
+    "appId": "demo-saas",
+    "layer": "web-desktop"
+  },
+  "requiredEvidenceRefs": [
+    ".ai/contracts/locator-evidence.example.json",
+    ".ai/contracts/allure-step-mapping.example.json"
+  ],
+  "allowedFiles": [
+    "apps/demo-saas/web-desktop/src/test/java/**",
+    "apps/demo-saas/web-desktop/src/test/resources/**",
+    "framework-web/src/test/java/**"
+  ],
+  "forbiddenChanges": [
+    "Generated-owned files",
+    "pom.xml files",
+    "qa-factory.lock.json"
+  ],
+  "validationCommands": [
+    "qaff verify --project .",
+    "mvn -B verify"
+  ],
+  "reviewContractRef": ".ai/contracts/generated-test-review.example.json"
+}

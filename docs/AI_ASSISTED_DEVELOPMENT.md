@@ -56,7 +56,7 @@ When prompting AI agents, reference:
 - **Page Object Model** — See [HOW_TO_ADD_PAGE_OBJECT.md](HOW_TO_ADD_PAGE_OBJECT.md)
 - **Test structure** — See [HOW_TO_ADD_WEB_TEST.md](HOW_TO_ADD_WEB_TEST.md) and [HOW_TO_ADD_API_TEST.md](HOW_TO_ADD_API_TEST.md)
 - **Annotations** — See [HOW_TO_USE_ALLURE.md](HOW_TO_USE_ALLURE.md) and [HOW_TO_USE_JUNIT5.md](HOW_TO_USE_JUNIT5.md)
-- **Example classes** — Use `ExamplePageObject.java`, `ExampleWebTest.java`, etc. as style guides
+- **Example classes** — Use `LoginPage.java`, `LoginTest.java`, etc. (under `apps/swag-labs/web-desktop`) as style guides
 
 ## Managed Files and AI
 

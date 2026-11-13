@@ -30,9 +30,6 @@ Set `target=external` and `baseUrl` to your application's URL, and the three
 least one element matching `smoke.itemSelector`. The defaults describe the bundled
 fixture. (The same keys can be set once in the qaff config as `apps[].web.smoke`.)
 
-The richer `DemoProductCardTest` reference example asserts the fixture's own product
-data, so it is skipped automatically on an external target.
-
 ## Option B — override at run time (no file edit)
 
 Settings resolve in this order (**highest wins**):

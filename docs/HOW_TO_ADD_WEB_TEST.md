@@ -48,7 +48,7 @@ driver yourself — the base class manages its lifecycle.
 
 Encapsulate element locators in a page object that extends `BasePage`. See
 [HOW_TO_ADD_PAGE_OBJECT.md](HOW_TO_ADD_PAGE_OBJECT.md) and the generated
-`DemoHomePage` / `ProductCardComponent` for working examples.
+`LoginPage` / `InventoryPage` in this repository for working examples.
 
 ### 3. Use explicit waits
 
@@ -90,6 +90,5 @@ See [HOW_TO_RUN_TESTS_LOCALLY.md](HOW_TO_RUN_TESTS_LOCALLY.md) for more options.
 In `apps/<id>/web-desktop/src/test/java`:
 
 - `DemoHomeSmokeTest` — the minimal runnable smoke test.
-- `DemoProductCardTest` — a richer example: a reusable `PageComponent`, soft
-  assertions, and a parameterized test.
-- `ExampleWebTest` — an annotated `@Disabled` template you can copy.
+- `LoginTest`, `InventoryTest`, `CartTest`, `CheckoutTest` — the Swag Labs scenarios;
+  `LoginTest` is the shortest one to copy.

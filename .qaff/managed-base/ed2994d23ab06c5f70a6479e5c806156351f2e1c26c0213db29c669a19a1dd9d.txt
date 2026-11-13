@@ -1,0 +1,31 @@
+# Maven
+target/
+**/target/
+
+# Allure
+allure-results/
+allure-report/
+.allure/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# qaff local state (downloaded sample apps, audit log, dry-run request files).
+# .qaff/managed-base/ stays tracked: qaff update merges local edits from it.
+.qaff/*
+!.qaff/managed-base/
+
+# qaff update --apply report
+QAFF_UPDATE_REPORT.md
+
+# MCP dry-run request files (may hold caller-supplied comment text)
+.ai/mcp/outbox/

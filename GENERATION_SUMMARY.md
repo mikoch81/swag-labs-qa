@@ -95,12 +95,8 @@ framework from the inputs below.
 .mcp.json
 AGENTS.md
 apps/swag-labs/web-desktop/pom.xml
-apps/swag-labs/web-desktop/src/test/java/com/example/swaglabsqa/apps/swaglabs/webdesktop/ExampleTestData.java
-apps/swag-labs/web-desktop/src/test/java/com/example/swaglabsqa/apps/swaglabs/webdesktop/ExampleWebTest.java
 apps/swag-labs/web-desktop/src/test/java/com/example/swaglabsqa/apps/swaglabs/webdesktop/pages/DemoHomePage.java
-apps/swag-labs/web-desktop/src/test/java/com/example/swaglabsqa/apps/swaglabs/webdesktop/pages/ProductCardComponent.java
 apps/swag-labs/web-desktop/src/test/java/com/example/swaglabsqa/apps/swaglabs/webdesktop/tests/DemoHomeSmokeTest.java
-apps/swag-labs/web-desktop/src/test/java/com/example/swaglabsqa/apps/swaglabs/webdesktop/tests/DemoProductCardTest.java
 apps/swag-labs/web-desktop/src/test/resources/allure.properties
 apps/swag-labs/web-desktop/src/test/resources/config.properties
 apps/swag-labs/web-desktop/src/test/resources/fixtures/swag-labs.html
